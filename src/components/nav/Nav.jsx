@@ -6,6 +6,7 @@ import { BiBook } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { LiaCertificateSolid } from "react-icons/lia";
+import { FaRegImages } from "react-icons/fa"; // Importing portfolio icon
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
@@ -61,6 +62,13 @@ const Nav = () => {
         className={activeNav === "#services" ? "active" : ""}
       >
         <RiServiceLine />
+      </a>
+      <a
+        href="#portfolio"
+        onClick={() => setActiveNav("#portfolio")}
+        className={activeNav === "#portfolio" ? "active" : ""}
+      >
+        <FaRegImages />
       </a>
       <a
         href="#certificates"

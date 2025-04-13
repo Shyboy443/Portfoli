@@ -1,0 +1,106 @@
+.profession__slider {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .profession__title {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+  
+  .slider__container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1rem;
+  }
+  
+  .slider {
+    width: 100%;
+    height: 5px;
+    appearance: none;
+    background: var(--color-light);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .slider__markers {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -10px;
+    padding: 0 7px;
+  }
+  
+  .slider__marker {
+    width: 10px;
+    height: 10px;
+    background: var(--color-light);
+    border-radius: 50%;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .slider__marker.active {
+    background: var(--color-primary);
+  }
+  
+  .profession__labels {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .profession__label {
+    font-size: 0.8rem;
+    color: var(--color-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .profession__label.active {
+    color: var(--color-primary);
+    font-weight: bold;
+  }
+  
+  .profession__label:hover {
+    color: var(--color-white);
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 600px) {
+    .profession__labels {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+  
+    .slider__container {
+      max-width: 300px;
+    }
+  }
+  

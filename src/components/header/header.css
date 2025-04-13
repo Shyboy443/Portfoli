@@ -1,13 +1,41 @@
 header {
-    height: 100vh;
-    padding: 7rem;
+    height: 119vh; /* Changed from min-height to height for responsiveness */
+    padding: 7rem; /* Adjusted padding */
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .header__container{
     text-align: center;
-    height: 100%;
+    height: 100%; /* Ensured full height for container */
     position: relative;
+}
+
+/* Profession Hint */
+.profession-hint {
+    font-size: .9rem;
+    color: var(--color-light);
+    opacity: 1;
+    margin: 0.5rem auto 1.2rem;
+    max-width: 80%;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    animation: fadeInPulse 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect alternative */
+.profession-hint:hover {
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+@keyframes fadeInPulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
 }
 
 /*   CTA */
@@ -38,7 +66,6 @@ header {
     background: var(--color-primary);
 }
 
-
 /* ME */
 
 .me{
@@ -48,14 +75,12 @@ header {
     position: absolute;
     left: calc(50% - 11rem);
     margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0 ;
+    border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 4rem 1.5rem 1.5rem 1.5rem;
 }
 
-
 /* Scroll Down */
-
 .scroll__down{
     position: absolute;
     right: -2.3rem;
@@ -65,13 +90,27 @@ header {
     font-size: 0.9rem;
 }
 
-
-
 /* MEDIA QUARIES (MEDIUM DEVICES) */
 
 @media screen and (max-width:1024px){
    header{
-        height: 64vh;
+        height: 70vh; /* Kept height for responsiveness */
+        padding-top: 5rem; /* Adjusted padding */
+        padding-bottom: 2rem;
+    }
+
+    .me {
+        height: 25rem;
+        margin-top: 2rem;
+    }
+
+    .header__container {
+        padding-bottom: 8rem;
+    }
+
+    .profession-hint {
+        margin: 0.3rem auto 1rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -79,10 +118,52 @@ header {
 
 @media screen and (max-width:600px){
     header{
-        height: 94vh;
+        height: 115vh; /* Kept height for responsiveness */
+        padding: 2rem 1rem;
     }
+
+    .me {
+        width: 19rem;
+        height: 22rem;
+        left: calc(50% - 9.5rem); /* Fixed centering calculation */
+        margin-top: 2rem;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .header__container {
+        padding-bottom: 6rem;
+    }
+
+    .profession-hint {
+        max-width: 90%;
+        font-size: 0.65rem;
+        margin: 0.2rem auto 0.8rem;
+    }
+
     .header__socials,
-     .scroll__down{
+    .scroll__down{
         display: none;
+    }
+}
+
+/* Additional media query for extra small devices */
+@media screen and (max-width:380px){
+    .me {
+        width: 17rem;
+        height: 20rem;
+        left: calc(50% - 8.5rem);
+    }
+}
+
+/* Fix for very large screens */
+@media screen and (min-width:1800px){
+    header {
+        padding-top: 10rem;
+    }
+
+    .me {
+        width: 26rem;
+        height: 34rem;
+        left: calc(50% - 13rem);
     }
 }
