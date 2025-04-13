@@ -94,7 +94,7 @@ header {
 
 @media screen and (max-width:1024px){
    header{
-        height: 70vh; /* Kept height for responsiveness */
+        height: 110vh; /* Kept height for responsiveness */
         padding-top: 5rem; /* Adjusted padding */
         padding-bottom: 2rem;
     }
